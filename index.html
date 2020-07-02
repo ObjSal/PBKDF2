@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Author: Salvador Guerrero -->
+<!--suppress HtmlFormInputWithoutLabel -->
+<html lang="en">
+<head>
+    <title>PBKDF2</title>
+    <script type="application/javascript" src="actions.js" defer></script>
+    <script type="application/javascript" src="counter.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="container">
+<div id="header" class="textStyle">Password-Based Key Derivation Function 2 (PBKDF2)</div>
+<div id="inputDiv" class="largeTextDiv"><textarea id="inputTextArea" class="textStyle" placeholder="Paste text here..." cols="0" rows="0"></textarea></div>
+<div id="buttonsDiv">
+    <div class="verticalStack">
+        <label class="textStyle smallLabel" for="saltInput">Salt</label>
+        <input type="text" class="smallInput" id="saltInput" placeholder="salt">
+    </div>
+    <div class="verticalLine"></div>
+    <div class="verticalStack">
+        <label class="textStyle smallLabel" for="iterationsInput">Iterations</label>
+        <input type="text" class="smallInput" id="iterationsInput" placeholder="5000" value="5000">
+    </div>
+    <div class="verticalLine"></div>
+    <div class="verticalStack">
+        <label class="textStyle smallLabel" for="hashSelect">Hash</label>
+        <select class="smallInput" id="hashSelect" name="Hash">
+            <option value="SHA-1">SHA-1</option>
+            <option value="SHA-256" selected="selected">SHA-256</option>
+            <option value="SHA-384">SHA-384</option>
+            <option value="SHA-512">SHA-512</option>
+        </select>
+    </div>
+    <div class="verticalLine"></div>
+    <div class="verticalStack">
+        <label class="textStyle smallLabel" for="lengthInput">Length</label>
+        <input type="text" class="smallInput" id="lengthInput" placeholder="256" value="256">
+    </div>
+    <div class="verticalLine"></div>
+    <button id="hashButton" class="textStyle" title="Hash text">Run</button>
+</div>
+<div id="resultDiv" class="largeTextDiv"><textarea id="resultTextArea" class="textStyle" placeholder="Paste something in the above text area and click a button..." cols="0" rows="0" readonly></textarea></div>
+<div id="footer" class="textStyle">Created by Salvador Guerrero</div>
+</div>
+</body>
+</html>
